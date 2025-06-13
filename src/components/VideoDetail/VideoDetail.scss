@@ -1,0 +1,30 @@
+.videos__section {
+    display: grid;
+    padding: 30px;
+    grid-template-columns: 1fr 300px;
+    grid-gap: 20px;
+    width: 100%;
+}
+
+
+
+
+@media screen and (max-width: 1024px) {
+    .videos__section {
+        grid-template-columns: 1fr;
+        grid-gap: 50px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .videos__section {
+        padding-inline: 20px;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .videos__section {
+        padding-inline: 10px;
+    }
+}

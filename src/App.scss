@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #0f0f0f;
+    background-color: #fff;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+main {
+    min-height: calc(100vh - 69px);
+}
+
+a {
+    text-decoration: none;
+}
+
+input,
+button {
+    outline: none;
+    border: none;
+}
+
+button {
+    background: none;
+}
+
+ul {
+    list-style: none;
+}
+
+// Boton de cargar mas
+.load-more-btn {
+    grid-column: 1 / -1;
+    background-color: rgb(33, 102, 206);
+    color: #fff;
+    width: max-content;
+    margin-inline: auto;
+    margin-top: 20px;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 17px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+        box-shadow: 0 4px 7px rgba(0,0,0,0.4);
+        transform: translateY(-5px);
+    }
+}
+
+main.dark {
+    background-color: #222;
+}

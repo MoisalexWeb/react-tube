@@ -1,0 +1,69 @@
+.playlist__videos {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    grid-column: 2 / 3;
+
+    @media screen and (max-width: 1150px) {
+        grid-column: 1 / 2;
+    }
+
+    &__card {
+        display: flex;
+        align-items: center;
+        transition: background-color 0.3s ease;
+        padding: 5px;
+        border-radius: 10px;
+        width: 100%;
+
+        &:hover {
+            background-color: #e9e9e9;
+        }
+
+        &-number {
+            font-size: 20px;
+            font-weight: 500;
+            color: #434343;
+            padding-inline: 10px;
+        }
+
+        .videoCard {
+            display: flex;
+            grid-gap: 10px;
+            max-width: 100%;
+
+            &-img {
+                width: 230px;
+                height: 120px;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+
+            &__details {
+                margin-top: 0;
+                height: max-content;
+                grid-gap: 10px;
+
+                &-title {
+                    font-size: 17px;
+                }
+
+                &__descripcion {
+                    justify-content: start;
+                    grid-gap: 20px;
+                }
+            }
+        }
+    }
+}
+
+
+main.dark {
+    .playlist__videos__card-number {
+        color: #fff;
+    }
+
+    .playlist__videos__card:hover {
+        background-color: #3a3a3a;
+    }
+}

@@ -1,0 +1,117 @@
+.playlist__page {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    grid-gap: 20px;
+    position: relative;
+    min-height: calc(100vh - 70px);
+}
+
+
+.playlist-grid-skeleton {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    grid-column: 2 / 3;
+}
+
+
+@media screen and (max-width: 1150px) {
+    .playlist__page {
+        grid-template-columns: 1fr;
+        padding-inline: 10px;
+    }
+
+    .playlist-grid-skeleton {
+        grid-column: 1 / 2;
+    }
+
+    .playlist__videos__card {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .playlist__videos__card {
+        overflow: hidden;
+
+        &-number {
+            font-size: 18px;
+        }
+
+        .videoCard-img {
+            width: 200px;
+            height: 100px;
+        }
+
+        .videoCard__details-title {
+            font-size: 16px;
+        }
+
+        .videoCard__details__descripcion-time {
+            display: none;
+            visibility: hidden;
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .playlist__videos__card {
+
+        &-number {
+            font-size: 16px;
+            padding-inline: 5px;
+        }
+
+        .videoCard__details-title {
+            font-size: 16px;
+        }
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .playlist__videos__card {
+
+        .videoCard-img {
+            width: 170px;
+            height: 80px;
+        }
+
+        .videoCard__details-title {
+            font-size: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .playlist__videos__card .videoCard-img {
+        width: 150px;
+    }
+
+    .playlist__videos__card .videoCard__details__descripcion-channel {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .playlist__videos__card .videoCard__details {
+        display: none;
+        visibility: hidden;
+    }
+
+    .playlist__videos__card .videoCard>a {
+        width: 100%;
+    }
+
+    .playlist__videos__card .videoCard-img {
+        width: 100%;
+        height: 120px;
+        object-fit: cover;
+    }
+
+    .playlist__videos__card-number {
+        font-size: 18px;
+    }
+}

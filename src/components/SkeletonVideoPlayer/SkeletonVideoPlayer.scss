@@ -1,0 +1,42 @@
+.skeleton-video-player {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+    animation: changeColor 0.6s ease infinite alternate;
+    width: 100%;
+
+    &__video {
+        height: 350px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+    }
+
+    &__title, &__description {
+        width: 90%;
+        height: 80px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+    }
+
+    &__stadistics {
+        display: flex;
+        justify-content: space-between;
+
+        &-item {
+            width: 20%;
+            background-color: rgba(0, 0, 0, 0.5);
+            height: 30px;
+            border-radius: 10px;
+        }
+    }
+}
+
+@keyframes changeColor {
+    0% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0.8;
+    }
+}

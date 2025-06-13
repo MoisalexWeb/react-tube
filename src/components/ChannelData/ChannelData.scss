@@ -1,0 +1,120 @@
+.banner {
+    height: 300px;
+    border-radius: 20px;
+    position: relative;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        border-radius: 20px;
+        background: rgba(28, 19, 150, 0.8);
+        background: linear-gradient(98deg, rgba(16, 9, 125, 0.8) 6%, rgba(8, 8, 161, 0.8) 21%, rgba(68, 136, 238, 1) 98%);
+    }
+
+    @media screen and (max-width: 600px) {
+        height: 250px;
+        padding-inline: 0;
+    }
+
+    &-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: inherit;
+        position: relative;
+        z-index: 20;
+    }
+}
+
+.channel-info {
+    padding: 0 20px;
+    position: relative;
+    z-index: 30;
+
+    &__data {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        width: 100%;
+        max-width: 550px;
+        grid-gap: 10px;
+        margin: 0 auto;
+        margin-top: -100px;
+        position: relative;
+        z-index: 10;
+
+        &__figure {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            position: relative;
+            z-index: 30;
+
+            &-img {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                object-fit: cover;
+                position: relative;
+                z-index: 30;
+                box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+                border: 1px solid #f2f2f2;
+            }
+        }
+
+        &__texts {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            grid-gap: 5px;
+            text-align: center;
+
+            &-title {
+                display: inline-flex;
+                align-items: center;
+                grid-gap: 3px;
+                font-weight: 700;
+                font-size: 25px;
+
+                i {
+                    font-size: 20px;
+                }
+            }
+
+            &-name {
+                color: #48e;
+                font-weight: 500;
+            }
+
+            &-text {
+                font-size: 15px;
+            }
+        }
+
+        &-description {
+            grid-column: 1 / -1;
+            text-align: center;
+        }
+    }
+}
+
+
+main.dark {
+    .channel-info__data__texts-title {
+        color: #fff;
+    }
+
+    .channel-info__data__texts-text {
+        color: #f2f2f2;
+    }
+
+    .channel-info__data-description {
+        color: #d3d3d3;
+    }
+}

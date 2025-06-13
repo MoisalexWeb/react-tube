@@ -1,0 +1,32 @@
+.error-card {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: 1 / -1;
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    margin-top: 40px;
+    text-align: center;
+    height: max-content;
+    grid-gap: 5px;
+
+    &-text {
+        font-size: 30px;
+        margin: 0;
+    }
+
+    i {
+        font-size: 60px;
+    }
+}
+
+main.dark .error-card {
+    background-color: #343434;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(30, 30, 30, 0.8);
+}
